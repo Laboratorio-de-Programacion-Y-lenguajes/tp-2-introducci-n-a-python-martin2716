@@ -1,41 +1,18 @@
-# ============================================================
-# MÓDULO 2: Condicionales
-# ============================================================
+"""Condicionales simples para el TP.
 
+Función pedida:
+- evaluar_numero(n: int) -> str
 
-def clasificar_numero(n: int) -> str:
-    """
-    Retorna "positivo", "negativo" o "cero" según corresponda.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+La salida es simple: "negativo", "cero" o "positivo".
+"""
 
+def evaluar_numero(n: int) -> str:
+    """Evalúa si un número es negativo, cero o positivo.
 
-def mayor_de_tres(a: int, b: int, c: int) -> int:
+    Retorna exactamente una de las cadenas: "negativo", "cero", "positivo".
     """
-    Retorna el mayor de tres números.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def clasificar_nota(nota: float) -> str:
-    """
-    Retorna la categoría de la nota:
-    - nota >= 9: "Sobresaliente"
-    - nota >= 7: "Bueno"
-    - nota >= 6: "Aprobado"
-    - nota < 6:  "Desaprobado"
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def es_bisiesto(anio: int) -> bool:
-    """
-    Retorna True si el año es bisiesto.
-    Un año es bisiesto si es divisible por 4,
-    excepto los divisibles por 100, salvo que también lo sean por 400.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+    if n < 0:
+        return "negativo"
+    if n == 0:
+        return "cero"
+    return "positivo"
