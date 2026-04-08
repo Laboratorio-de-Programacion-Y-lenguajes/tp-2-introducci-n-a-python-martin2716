@@ -1,41 +1,28 @@
-# ============================================================
-# MÓDULO 6: Funciones
-# ============================================================
+"""Módulo de funciones simples para el TP.
+
+Contiene la función `contar_palabra` solicitada en la consigna.
+"""
+
+import string
 
 
-def aplicar_funcion(lista: list, func) -> list:
-    """
-    Aplica func a cada elemento de la lista y retorna la nueva lista.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+def contar_palabra(texto: str, palabra: str) -> int:
+    """Cuenta ocurrencias exactas de `palabra` en `texto`.
 
+    El conteo es case-insensitive y compara palabras separadas por
+    espacios. Los signos de puntuación al principio o final de cada
+    token se eliminan antes de comparar.
 
-def componer(f, g):
+    Ejemplo: contar_palabra("Hola, hola mundo", "hola") -> 2
     """
-    Retorna una nueva función que aplica g y luego f.
-    Ejemplo: componer(f, g)(x) == f(g(x))
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def memoizar(func):
-    """
-    Retorna una versión de func que cachea sus resultados.
-    Si se llama con los mismos argumentos, retorna el resultado cacheado.
-    """
-    cache = {}
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def reducir(lista: list, func, inicial):
-    """
-    Aplica func acumulativamente a los elementos de lista,
-    comenzando con inicial.
-    Ejemplo: reducir([1,2,3], lambda a,b: a+b, 0) -> 6
-    NO uses functools.reduce
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+    if not texto or not palabra:
+        return 0
+    palabra = palabra.lower()
+    # eliminar puntuación simple en tokens
+    tokens = texto.split()
+    contador = 0
+    for t in tokens:
+        t_clean = t.strip(string.punctuation).lower()
+        if t_clean == palabra:
+            contador += 1
+    return contador
