@@ -1,50 +1,15 @@
-# ============================================================
-# MÓDULO 1: Variables y Tipos de Datos
-# ============================================================
-# Completá cada función siguiendo las instrucciones.
-# NO modifiques los nombres de las funciones ni sus parámetros.
-# ============================================================
+"""Módulo de variables - funciones simples para el TP.
 
+Funciones pedidas por la consigna:
+- armar_mensaje(nombre: str, edad: int, ciudad: str) -> str
 
-def crear_saludo(nombre: str) -> str:
-    """
-    Retorna un saludo personalizado.
-    Ejemplo: crear_saludo("Ana") -> "Hola, Ana!"
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+El código está escrito de forma clara y elemental para un alumno.
+"""
 
+def armar_mensaje(nombre: str, edad: int, ciudad: str) -> str:
+    """Arma un mensaje con los datos personales.
 
-def suma_enteros(a: int, b: int) -> int:
+    Ejemplo: armar_mensaje("Ana", 20, "Ushuaia") ->
+    "Soy Ana, tengo 20 años y vivo en Ushuaia."
     """
-    Retorna la suma de dos enteros.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def es_mayor_de_edad(edad: int) -> bool:
-    """
-    Retorna True si edad >= 18, False caso contrario.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def tipo_de_dato(valor) -> str:
-    """
-    Retorna el nombre del tipo de dato del valor recibido.
-    Ejemplo: tipo_de_dato(42) -> "int"
-             tipo_de_dato("hola") -> "str"
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def convertir_a_float(valor: str) -> float:
-    """
-    Convierte un string numérico a float.
-    Ejemplo: convertir_a_float("3.14") -> 3.14
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+    return f"Soy {nombre}, tengo {edad} años y vivo en {ciudad}."
