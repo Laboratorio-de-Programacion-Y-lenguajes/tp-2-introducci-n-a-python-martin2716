@@ -1,45 +1,30 @@
-# ============================================================
-# MÓDULO 3: Listas
-# ============================================================
+"""Funciones sencillas sobre listas para el TP.
+
+Funciones pedidas por la consigna:
+- suma(lista: list[float]) -> float
+- promedio(lista: list[float]) -> float
+
+Soluciones directas y didácticas.
+"""
+
+def suma(lista: list[float]) -> float:
+    """Devuelve la suma de los elementos de la lista.
+
+    Una lista vacía retorna 0.0.
+    """
+    if not lista:
+        return 0.0
+    total = 0.0
+    for v in lista:
+        total += float(v)
+    return total
 
 
-def suma_lista(numeros: list) -> int | float:
-    """
-    Retorna la suma de todos los elementos de la lista.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+def promedio(lista: list[float]) -> float:
+    """Devuelve el promedio de la lista.
 
-
-def filtrar_pares(numeros: list) -> list:
+    Si la lista está vacía devuelve 0.0 para evitar división por cero.
     """
-    Retorna una nueva lista con solo los números pares.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def invertir_lista(lista: list) -> list:
-    """
-    Retorna la lista invertida SIN modificar la original.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def eliminar_duplicados(lista: list) -> list:
-    """
-    Retorna una nueva lista sin elementos duplicados,
-    manteniendo el orden de primera aparición.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def aplanar_lista(lista: list) -> list:
-    """
-    Dada una lista de listas, retorna todos los elementos en una sola lista.
-    Ejemplo: aplanar_lista([[1,2],[3,4]]) -> [1, 2, 3, 4]
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+    if not lista:
+        return 0.0
+    return suma(lista) / len(lista)
