@@ -1,9 +1,10 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/X4xiTEDQ)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23463092)
 # TP 2 · Introducción a Python y Patrones de Prompting (GitHub Classroom)
 
 **Stack**: Python 3.13+, `pytest`, Git/GitHub Classroom (autograding)  
 **Entrega**: código en el repositorio asignado (push a `main`). Los tests se ejecutan automáticamente.
 
----
 
 ## 1) Objetivo
 
@@ -11,7 +12,6 @@ Resolver 7 ejercicios introductorios de Python (variables, condicionales, listas
 
 **Importante**: el autograding evalúa **solo** el código (funciones). El uso de LLM se evalúa de forma **manual** leyendo tus prompts documentados.
 
----
 
 ## 2) Instalación de Python y pip (guía rápida)
 
@@ -58,7 +58,6 @@ Si `python` no se reconoce, reiniciá la terminal o reinstalá asegurando “Add
 
 > Si tu distro no trae 3.13, podés usar 3.11+ localmente para trabajar, pero el autograding corre en la versión configurada por la cátedra.
 
----
 
 ## 3) Setup del proyecto (tu repo de Classroom)
 
@@ -90,17 +89,10 @@ Si `python` no se reconoce, reiniciá la terminal o reinstalá asegurando “Add
    pytest -v
    ```
 
----
 
 ## 4) Cómo se entrega
 
-- Completá las funciones en `src/`.
-- Corré tests localmente (`pytest -v`).
-- Hacé commits significativos (mínimo 7).
-- Hacé `push` a `main`.
-- Revisá GitHub → **Actions** para ver si quedó ✅.
 
----
 
 ## 5) Registro de prompts (obligatorio)
 
@@ -120,7 +112,6 @@ Prompt:
 
 No hace falta link si el LLM no lo permite, pero sí el texto del prompt.
 
----
 
 ## 6) Ejercicios + Ejemplos de prompt por patrón
 
@@ -135,7 +126,6 @@ No hace falta link si el LLM no lo permite, pero sí el texto del prompt.
 > 3) devolver un string usando f-strings con el formato: "Soy {nombre}, tengo {edad} años y vivo en {ciudad}."  
 > No uses librerías externas. Mostrá una función `armar_mensaje(nombre, edad, ciudad)` con docstring.
 
----
 
 ### 6.2 Script 2 — Condicionales (`src/condicionales.py`)
 **Patrón**: Interacción invertida  
@@ -149,7 +139,6 @@ No hace falta link si el LLM no lo permite, pero sí el texto del prompt.
 > - y cómo priorizar condiciones (por ejemplo, primero negativo o primero paridad).  
 > Después de mis respuestas, recién ahí proponé el código.
 
----
 
 ### 6.3 Script 3 — Listas (`src/listas.py`)
 **Patrón**: Verificador cognitivo  
@@ -164,7 +153,6 @@ No hace falta link si el LLM no lo permite, pero sí el texto del prompt.
 > 2) decime errores típicos (por ejemplo división por cero),  
 > 3) proponé 3 tests con entradas y salidas esperadas (sin escribir el código final por mí).
 
----
 
 ### 6.4 Script 4 — Funciones (`src/funciones.py`)
 **Patrón**: Reflexión  
@@ -179,7 +167,6 @@ No hace falta link si el LLM no lo permite, pero sí el texto del prompt.
 > Analizá pros/contras (performance + simplicidad + edge cases como puntuación).  
 > Luego recomendá UNO y escribí el código con docstring, dejando claro qué casos NO cubre (por ejemplo, "hola," vs "hola").
 
----
 
 ### 6.5 Script 5 — Diccionarios (`src/diccionarios.py`)
 **Patrón**: Generación infinita  
@@ -192,7 +179,6 @@ No hace falta link si el LLM no lo permite, pero sí el texto del prompt.
 > "{nombre} {apellido} ({edad}) - {mail}".  
 > Luego extraé una regla general para implementar `mostrar_datos(dic)`.
 
----
 
 ### 6.6 Script 6 — Loops (`src/loops.py`)
 **Patrón**: Refinamiento de preguntas  
@@ -204,7 +190,6 @@ No hace falta link si el LLM no lo permite, pero sí el texto del prompt.
 > P3: ¿Qué debería hacer si N es negativo? ¿Conviene lanzar error o devolver lista vacía para un TP?  
 > P4: Mostrame una implementación de `repetir_palabra(palabra: str, cantidad: int) -> list[str]` que devuelva [] si cantidad < 0.
 
----
 
 ### 6.7 Script 7 — Excepciones (`src/operaciones.py`)
 **Patrón**: Enfoques alternativos  
@@ -218,21 +203,23 @@ No hace falta link si el LLM no lo permite, pero sí el texto del prompt.
 > C) devolver `None` o lanzar excepción.  
 > Elegí el más adecuado para principiantes + tests con pytest, justificá, y escribí el código final.
 
----
 
 ## 7) Criterios de aprobación
 
-- [ ] Todos los tests pasan (`pytest -v`)
-- [ ] Cobertura ≥ 70% (`pytest --cov=src --cov-fail-under=70`)
-- [ ] Código claro: nombres descriptivos, sin duplicación innecesaria
-- [ ] Mínimo 7 commits significativos (uno por script)
-- [ ] `PROMPTS.md` con 7 prompts (uno por ejercicio)
 
----
 
 ## 8) Troubleshooting rápido
 
-- **`pip: command not found`**: usá `python -m pip --version` (o `python3 -m pip ...`)
-- **No corre pytest**: asegurate de activar el entorno virtual `.venv` y correr `pip install -r requirements.txt`
-- **Falla un test**: leé el mensaje, muestra “esperado vs obtenido”
-- **Actions falla pero local pasa**: revisá versión de Python configurada y dependencias
+TP2 - Introducción a Python
+
+Proyecto con 7 ejercicios introductorios. Cada módulo en `src/` implementa una
+función simple.
+
+Requisitos: Python 3.13+
+
+Ejecutar tests:
+
+      python -m pip install -r requirements.txt
+      pytest -q
+
+Ver `PROMPTS.md` para los prompts usados.

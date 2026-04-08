@@ -1,40 +1,24 @@
-# ============================================================
-# MÓDULO 7: Operaciones con Strings
-# ============================================================
+"""Operaciones numéricas sencillas para el TP.
+
+Contiene `operaciones(a: float, b: float) -> dict` que retorna
+las operaciones básicas entre `a` y `b`.
+"""
 
 
-def es_palindromo(texto: str) -> bool:
-    """
-    Retorna True si el texto es palíndromo (ignorando espacios y mayúsculas).
-    Ejemplo: es_palindromo("Anita lava la tina") -> True
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+def operaciones(a: float, b: float) -> dict:
+    """Retorna un diccionario con resultados de operaciones básicas.
 
-
-def capitalizar_palabras(texto: str) -> str:
+    Claves devueltas: 'suma', 'resta', 'multiplicacion', 'division'.
+    Si la división no es posible (b == 0) la clave 'division'
+    contendrá la cadena "Error: división por cero".
     """
-    Capitaliza la primera letra de cada palabra.
-    Ejemplo: capitalizar_palabras("hola mundo") -> "Hola Mundo"
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def contar_vocales(texto: str) -> int:
-    """
-    Retorna la cantidad de vocales (a,e,i,o,u) en el texto,
-    sin distinguir mayúsculas/minúsculas.
-    """
-    # TU CÓDIGO AQUÍ
-    pass
-
-
-def caesar_cipher(texto: str, desplazamiento: int) -> str:
-    """
-    Aplica el cifrado César al texto con el desplazamiento dado.
-    Solo desplaza letras (a-z, A-Z), los demás caracteres no cambian.
-    Ejemplo: caesar_cipher("abc", 1) -> "bcd"
-    """
-    # TU CÓDIGO AQUÍ
-    pass
+    resultado = {
+        "suma": a + b,
+        "resta": a - b,
+        "multiplicacion": a * b,
+    }
+    if b == 0:
+        resultado["division"] = "Error: división por cero"
+    else:
+        resultado["division"] = a / b
+    return resultado
