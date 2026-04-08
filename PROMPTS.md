@@ -1,143 +1,72 @@
-# Registro de Prompts
+## PROMPTS - 7 ejercicios (uno por módulo)
 
-En este archivo debés documentar los prompts que usaste con herramientas de IA
-(GitHub Copilot, ChatGPT, etc.) durante el desarrollo del TP.
+Cada sección contiene: nombre del ejercicio, patrón usado y el prompt completo
+que un estudiante podría usar para generar la solución básica.
 
-**¿Por qué?** Queremos que aprendas a trabajar con IA de forma reflexiva:
-que sepas qué le pediste, qué obtuviste, y si tuviste que corregirlo.
+1) Variables — Patrón: Persona
+--------------------------------
+Nombre del ejercicio: armar_mensaje
+Prompt:
+Actuá como un profesor de programación. Escribí una función Python llamada
+`armar_mensaje(nombre: str, edad: int, ciudad: str) -> str` que devuelva el
+texto: "Soy {nombre}, tengo {edad} años y vivo en {ciudad}.". No uses librerías.
 
----
+2) Condicionales — Patrón: Template
+------------------------------------
+Nombre del ejercicio: evaluar_numero
+Prompt:
+Usá este template para crear la función `evaluar_numero(n: int) -> str`:
+- si n < 0 -> "negativo"
+- si n == 0 -> "cero"
+- si n > 0 -> "positivo"
+Escribí la función en Python con una docstring corta.
 
-## Formato para cada entrada
+3) Listas — Patrón: Recipe
+---------------------------
+Nombre del ejercicio: suma, promedio
+Prompt:
+Dame una receta paso a paso (comentarios breves) y el código para dos funciones
+en Python:
+- `suma(lista: list[float]) -> float` que devuelva 0.0 para lista vacía,
+- `promedio(lista: list[float]) -> float` que use `suma` y devuelva 0.0 si
+	la lista está vacía.
 
-```
-### [Número] - [Módulo]
+4) Funciones — Patrón: Question Refinement
+------------------------------------------
+Nombre del ejercicio: contar_palabra
+Prompt:
+Primero preguntame si el conteo debe ser case-insensitive y si debe
+ignorar la puntuación. Luego, con mis respuestas, escribí la función
+`contar_palabra(texto: str, palabra: str) -> int` que cuente coincidencias
+exactas (case-insensitive) y limpie puntuación simple.
 
-**Herramienta**: GitHub Copilot / ChatGPT / otra
+5) Diccionarios — Patrón: Cognitive Verifier
+-------------------------------------------
+Nombre del ejercicio: mostrar_datos
+Prompt:
+Como verificador, listá casos de prueba para una función `mostrar_datos(dic)`
+que reciba un diccionario con claves `nombre`, `apellido`, `edad`, `mail` y
+devuelva "{nombre} {apellido} ({edad}) - {mail}". Luego escribí la función
+en código simple.
 
-**Prompt usado**:
-> Escribí acá exactamente lo que le pediste a la IA
+6) Loops — Patrón: Flipped Interaction
+---------------------------------------
+Nombre del ejercicio: repetir_palabra
+Prompt:
+En vez de dar el código primero, indicá por qué devolver `[]` si `cantidad` <
+0 es razonable para un TP. Luego escribí la función
+`repetir_palabra(palabra: str, cantidad: int) -> list[str]` que implemente eso.
 
-**Resultado obtenido**:
-Describí brevemente qué generó (código, explicación, etc.)
-
-**¿Lo usaste tal cual o lo modificaste?**
-Explicá qué cambios hiciste y por qué (o por qué no cambiaste nada).
-```
-
----
-
-## Mis prompts
-
-### 1 - variables.py
-
-**Herramienta**: 
-
-**Prompt usado**:
-> 
-
-**Resultado obtenido**:
-
-
-**¿Lo usaste tal cual o lo modificaste?**
-
-
----
-
-### 2 - condicionales.py
-
-**Herramienta**: 
-
-**Prompt usado**:
-> 
-
-**Resultado obtenido**:
-
-
-**¿Lo usaste tal cual o lo modificaste?**
-
-
----
-
-### 3 - listas.py
-
-**Herramienta**: 
-
-**Prompt usado**:
-> 
-
-**Resultado obtenido**:
-
-
-**¿Lo usaste tal cual o lo modificaste?**
-
+7) Operaciones — Patrón: Context Manager
+-----------------------------------------
+Nombre del ejercicio: operaciones
+Prompt:
+Contextualizá: estamos escribiendo funciones para alumnos. Implementá
+`operaciones(a: float, b: float) -> dict` que retorne suma/resta/multiplicaci\u00f3n
+y división. Si `b` es 0, la división debe ser la cadena
+"Error: división por cero". Escribí el código y un breve comentario justificando
+la decisión.
 
 ---
 
-### 4 - diccionarios.py
-
-**Herramienta**: 
-
-**Prompt usado**:
-> 
-
-**Resultado obtenido**:
-
-
-**¿Lo usaste tal cual o lo modificaste?**
-
-
----
-
-### 5 - loops.py
-
-**Herramienta**: 
-
-**Prompt usado**:
-> 
-
-**Resultado obtenido**:
-
-
-**¿Lo usaste tal cual o lo modificaste?**
-
-
----
-
-### 6 - funciones.py
-
-**Herramienta**: 
-
-**Prompt usado**:
-> 
-
-**Resultado obtenido**:
-
-
-**¿Lo usaste tal cual o lo modificaste?**
-
-
----
-
-### 7 - operaciones.py
-
-**Herramienta**: 
-
-**Prompt usado**:
-> 
-
-**Resultado obtenido**:
-
-
-**¿Lo usaste tal cual o lo modificaste?**
-
-
----
-
-## Reflexión final
-
-Respondé brevemente (3-5 oraciones):
-
-- ¿Qué aprendiste sobre cómo formular buenos prompts?
-- ¿En qué casos la IA fue útil y en cuáles no?
-- ¿Qué harías diferente la próxima vez?
+Estos prompts son simples, académicos y fáciles de adaptar por un estudiante.
